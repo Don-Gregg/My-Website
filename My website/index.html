@@ -2,17 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Proper device configuration -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
   <title>Olaitan George | Frontend Developer</title>
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- SEO -->
+  <meta name="description" content="Olaitan George is a frontend developer building clean, responsive websites using HTML, CSS, and JavaScript.">
+  <meta name="author" content="Olaitan George">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Olaitan George | Frontend Developer">
+  <meta property="og:description" content="Frontend developer portfolio showcasing projects and skills.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Smooth scrolling (native, no JS hack) -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="header">
-    <nav class="nav container">
-      <h1 class="logo">Don_Gregg</h1>
+    <div class="container nav-container">
+      <h1 class="logo">Olaitan George</h1>
 
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -21,14 +47,19 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="home" class="hero">
-    <div class="container">
+    <div class="container hero-content">
       <h2>Hi, I’m Olaitan George</h2>
-      <p>Frontend Developer in the making</p>
+      <p>Frontend Developer | Learning JavaScript | Building real projects</p>
+
+      <!-- Smooth scrolls automatically -->
       <a href="#projects" class="btn">View Projects</a>
     </div>
   </section>
@@ -37,10 +68,19 @@
   <section id="about" class="section">
     <div class="container">
       <h2>About Me</h2>
-      <p>
-        I’m a frontend developer learning and building with HTML, CSS,
-        and JavaScript. I enjoy turning ideas into clean, responsive designs.
-      </p>
+      <div class="about-content">
+        <img src="assets/images/profile.jpg" alt="Profile picture" class="profile-img">
+        <p>
+          I’m a frontend developer focused on building clean, responsive, and
+          user-friendly websites. I work mainly with HTML and CSS, and I’m
+          currently learning JavaScript to add more interactivity and logic
+          to my projects.
+          <br><br>
+          I enjoy turning simple ideas into functional designs, improving my
+          skills through consistent practice, and learning by building real
+          projects.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -48,19 +88,61 @@
   <section id="skills" class="section bg-light">
     <div class="container">
       <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript (learning)</li>
-      </ul>
+      <div class="skills-list">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Responsive Design</div>
+        <div class="skill-card">Git & GitHub</div>
+      </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section">
+  <section id="projects" class="section projects">
     <div class="container">
       <h2>Projects</h2>
-      <p>Projects coming soon...</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <img src="assets/images/google-landing.jpg" alt="Google Landing Page Clone">
+          <h3>Google Landing Page (Dark)</h3>
+          <p>
+            A Google-style landing page inspired by Chrome’s dark theme,
+            recreated with HTML and CSS and customized with a background image.
+          </p>
+          <div class="project-links">
+            <a href="https://googlelandin.netlify.app" target="_blank">Live</a>
+            <a href="https://github.com/Don-Gregg/Google-landing-page-clone.git" target="_blank">Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/images/project2.jpg" alt="JavaScript Todo App">
+          <h3>JavaScript Todo App</h3>
+          <p>
+            A task management app built with vanilla JavaScript.
+            Features include adding, completing, deleting tasks,
+            and saving data using localStorage.
+          </p>
+          <div class="project-links">
+            <a href="https://to-do-app-simplify.netlify.app" target="_blank">Live</a>
+            <a href="https://github.com/Don-Gregg/To-Do-App.git" target="_blank">Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/images/project3.jpg" alt="Project Three">
+          <h3>Project Three</h3>
+          <p>A clean and minimal landing page designed with modern UI principles.</p>
+          <div class="project-links">
+            <a href="#">Live</a>
+            <a href="#">Code</a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -68,7 +150,31 @@
   <section id="contact" class="section bg-light">
     <div class="container">
       <h2>Contact</h2>
-      <p>Email: yemideleolaitan1@gmail.com</p>
+      <p>Email:
+        <a href="mailto:yemideleolaitan1@gmail.com">yemideleolaitan1@gmail.com</a>
+      </p>
+
+      <!-- Boxicons social links -->
+      <div class="social-icons">
+        <a href="https://github.com/don-gregg" target="_blank" aria-label="GitHub">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="https://twitter.com/YemideleOlaitan" target="_blank" aria-label="Twitter">
+          <i class='bx bxl-twitter'></i>
+        </a>
+        <a href="https://discord.com/users/don_gregg" target="_blank" aria-label="Discord">
+          <i class='bx bxl-discord-alt'></i>
+        </a>
+        <a href="https://t.me/Olayemi017" target="_blank" aria-label="Telegram">
+          <i class='bx bxl-telegram'></i>
+        </a>
+        <a href="https://instagram.com/i_am_don_gregg" target="_blank" aria-label="Instagram">
+          <i class='bx bxl-instagram'></i>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -77,6 +183,7 @@
     <p>© 2025 DonGregg. All rights reserved.</p>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- JS -->
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
